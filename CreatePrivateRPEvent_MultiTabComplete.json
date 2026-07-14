@@ -1,0 +1,768 @@
+{
+  "Name": "CreatePrivateRPEvent_MultiTabComplete",
+  "CreationDate": "2026-7-15",
+  "Commands": [
+    {
+      "Command": "store",
+      "Target": "fast",
+      "Value": "!replayspeed",
+      "Description": ""
+    },
+    {
+      "Command": "csvRead",
+      "Target": "rp.csv",
+      "Value": "",
+      "Description": "Initial read to load variables and find !csvReadStatus"
+    },
+    {
+      "Command": "while",
+      "Target": "\"${!csvReadStatus}\" == \"OK\"",
+      "Value": "",
+      "Description": "Loop runs as long as the CSV status is OK"
+    },
+    {
+      "Command": "selectWindow",
+      "Target": "TAB=OPEN",
+      "Value": "https://vaidicpujas.org/create_event/",
+      "Description": "Opens a brand new tab for the current row's data"
+    },
+    {
+      "Command": "type",
+      "Target": "id=outsideAshram",
+      "Value": "0",
+      "Targets": [
+        "id=outsideAshram",
+        "name=eventat",
+        "xpath=//*[@id=\"outsideAshram\"]",
+        "xpath=//input[@id='outsideAshram']",
+        "xpath=//input[2]",
+        "css=#outsideAshram"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "id=outsideAshram",
+      "Value": "",
+      "Targets": [
+        "id=outsideAshram",
+        "name=eventat",
+        "xpath=//*[@id=\"outsideAshram\"]",
+        "xpath=//input[@id='outsideAshram']",
+        "xpath=//input[2]",
+        "css=#outsideAshram"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "id=eventstate",
+      "Value": "",
+      "Targets": [
+        "id=eventstate",
+        "name=eventstate",
+        "xpath=//*[@id=\"eventstate\"]",
+        "xpath=//select[@id='eventstate']",
+        "xpath=//div[3]/div/div[2]/select",
+        "css=#eventstate"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "select",
+      "Target": "id=eventstate",
+      "Value": "label=Rajasthan",
+      "Targets": [
+        "id=eventstate",
+        "name=eventstate",
+        "xpath=//*[@id=\"eventstate\"]",
+        "xpath=//select[@id='eventstate']",
+        "xpath=//div[3]/div/div[2]/select",
+        "css=#eventstate"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "id=eventDistrict",
+      "Value": "",
+      "Targets": [
+        "id=eventDistrict",
+        "name=eventDistrict",
+        "xpath=//*[@id=\"eventDistrict\"]",
+        "xpath=//select[@id='eventDistrict']",
+        "xpath=//div[4]/select",
+        "css=#eventDistrict"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "select",
+      "Target": "id=eventDistrict",
+      "Value": "label=Jaipur",
+      "Targets": [
+        "id=eventDistrict",
+        "name=eventDistrict",
+        "xpath=//*[@id=\"eventDistrict\"]",
+        "xpath=//select[@id='eventDistrict']",
+        "xpath=//div[4]/select",
+        "css=#eventDistrict"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "id=eventcity",
+      "Value": "",
+      "Targets": [
+        "id=eventcity",
+        "name=eventcity",
+        "xpath=//*[@id=\"eventcity\"]",
+        "xpath=//input[@id='eventcity']",
+        "xpath=//div[6]/input",
+        "css=#eventcity"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "type",
+      "Target": "id=eventcity",
+      "Value": "${!COL1}",
+      "Targets": [
+        "id=eventcity",
+        "name=eventcity",
+        "xpath=//*[@id=\"eventcity\"]",
+        "xpath=//input[@id='eventcity']",
+        "xpath=//div[6]/input",
+        "css=#eventcity"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "id=sevaType",
+      "Value": "",
+      "Targets": [
+        "id=sevaType",
+        "name=sevaType",
+        "xpath=//*[@id=\"sevaType\"]",
+        "xpath=//select[@id='sevaType']",
+        "xpath=//form/div[4]/div/div[2]/select",
+        "css=#sevaType"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "select",
+      "Target": "id=sevaType",
+      "Value": "label=Private",
+      "Targets": [
+        "id=sevaType",
+        "name=sevaType",
+        "xpath=//*[@id=\"sevaType\"]",
+        "xpath=//select[@id='sevaType']",
+        "xpath=//form/div[4]/div/div[2]/select",
+        "css=#sevaType"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "id=purpose",
+      "Value": "",
+      "Targets": [
+        "id=purpose",
+        "name=purpose",
+        "xpath=//*[@id=\"purpose\"]",
+        "xpath=//select[@id='purpose']",
+        "xpath=//div[4]/div/div[4]/select",
+        "css=#purpose"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "select",
+      "Target": "id=purpose",
+      "Value": "label=Shravan Masa",
+      "Targets": [
+        "id=purpose",
+        "name=purpose",
+        "xpath=//*[@id=\"purpose\"]",
+        "xpath=//select[@id='purpose']",
+        "xpath=//div[4]/div/div[4]/select",
+        "css=#purpose"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "id=sub_purpose",
+      "Value": "",
+      "Targets": [
+        "id=sub_purpose",
+        "name=sub_purpose",
+        "xpath=//*[@id=\"sub_purpose\"]",
+        "xpath=//select[@id='sub_purpose']",
+        "xpath=//div[6]/select",
+        "css=#sub_purpose"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "select",
+      "Target": "id=sub_purpose",
+      "Value": "label=Rudra Puja @ Home",
+      "Targets": [
+        "id=sub_purpose",
+        "name=sub_purpose",
+        "xpath=//*[@id=\"sub_purpose\"]",
+        "xpath=//select[@id='sub_purpose']",
+        "xpath=//div[6]/select",
+        "css=#sub_purpose"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "id=sub_purpose",
+      "Value": "",
+      "Targets": [
+        "id=sub_purpose",
+        "name=sub_purpose",
+        "xpath=//*[@id=\"sub_purpose\"]",
+        "xpath=//select[@id='sub_purpose']",
+        "xpath=//div[6]/select",
+        "css=#sub_purpose"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "type",
+      "Target": "id=customizedSankalpa",
+      "Value": "1",
+      "Targets": [
+        "id=customizedSankalpa",
+        "name=addSankalpa",
+        "xpath=//*[@id=\"customizedSankalpa\"]",
+        "xpath=//input[@id='customizedSankalpa']",
+        "xpath=//div[3]/input",
+        "css=#customizedSankalpa"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "id=customizedSankalpa",
+      "Value": "",
+      "Targets": [
+        "id=customizedSankalpa",
+        "name=addSankalpa",
+        "xpath=//*[@id=\"customizedSankalpa\"]",
+        "xpath=//input[@id='customizedSankalpa']",
+        "xpath=//div[3]/input",
+        "css=#customizedSankalpa"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "id=new_country",
+      "Value": "",
+      "Targets": [
+        "id=new_country",
+        "xpath=//*[@id=\"new_country\"]",
+        "xpath=//input[@id='new_country']",
+        "xpath=//td[2]/input",
+        "css=#new_country"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "type",
+      "Target": "id=new_country",
+      "Value": "${!COL3}",
+      "Targets": [
+        "id=new_country",
+        "xpath=//*[@id=\"new_country\"]",
+        "xpath=//input[@id='new_country']",
+        "xpath=//td[2]/input",
+        "css=#new_country"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "id=new_name",
+      "Value": "",
+      "Targets": [
+        "id=new_name",
+        "xpath=//*[@id=\"new_name\"]",
+        "xpath=//input[@id='new_name']",
+        "xpath=//td/input",
+        "css=#new_name"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "type",
+      "Target": "id=new_name",
+      "Value": "Rudra Puja",
+      "Targets": [
+        "id=new_name",
+        "xpath=//*[@id=\"new_name\"]",
+        "xpath=//input[@id='new_name']",
+        "xpath=//td/input",
+        "css=#new_name"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "id=new_age",
+      "Value": "",
+      "Targets": [
+        "id=new_age",
+        "xpath=//*[@id=\"new_age\"]",
+        "xpath=//input[@id='new_age']",
+        "xpath=//td[3]/input",
+        "css=#new_age"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "type",
+      "Target": "id=new_age",
+      "Value": "4",
+      "Targets": [
+        "id=new_age",
+        "xpath=//*[@id=\"new_age\"]",
+        "xpath=//input[@id='new_age']",
+        "xpath=//td[3]/input",
+        "css=#new_age"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "id=datefrom",
+      "Value": "",
+      "Targets": [
+        "id=datefrom",
+        "name=datefrom",
+        "xpath=//*[@id=\"datefrom\"]",
+        "xpath=//input[@id='datefrom']",
+        "xpath=//div[8]/div/div[2]/input",
+        "css=#datefrom"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "type",
+      "Target": "id=datefrom",
+      "Value": "${!COL4}",
+      "Targets": [
+        "id=datefrom",
+        "name=datefrom",
+        "xpath=//*[@id=\"datefrom\"]",
+        "xpath=//input[@id='datefrom']",
+        "xpath=//div[8]/div/div[2]/input",
+        "css=#datefrom"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "id=datefrom",
+      "Value": "",
+      "Targets": [
+        "id=datefrom",
+        "name=datefrom",
+        "xpath=//*[@id=\"datefrom\"]",
+        "xpath=//input[@id='datefrom']",
+        "xpath=//div[8]/div/div[2]/input",
+        "css=#datefrom"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "id=dateto",
+      "Value": "",
+      "Targets": [
+        "id=dateto",
+        "name=dateto",
+        "xpath=//*[@id=\"dateto\"]",
+        "xpath=//input[@id='dateto']",
+        "xpath=//div[8]/div/div[4]/input",
+        "css=#dateto"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "type",
+      "Target": "id=dateto",
+      "Value": "${!COL5}",
+      "Targets": [
+        "id=dateto",
+        "name=dateto",
+        "xpath=//*[@id=\"dateto\"]",
+        "xpath=//input[@id='dateto']",
+        "xpath=//div[8]/div/div[4]/input",
+        "css=#dateto"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "id=dateto",
+      "Value": "",
+      "Targets": [
+        "id=dateto",
+        "name=dateto",
+        "xpath=//*[@id=\"dateto\"]",
+        "xpath=//input[@id='dateto']",
+        "xpath=//div[8]/div/div[4]/input",
+        "css=#dateto"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "id=startTime",
+      "Value": "",
+      "Targets": [
+        "id=startTime",
+        "name=startTime",
+        "xpath=//*[@id=\"startTime\"]",
+        "xpath=//input[@id='startTime']",
+        "xpath=//div[8]/div/div[6]/input",
+        "css=#startTime"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "type",
+      "Target": "id=startTime",
+      "Value": "${!COL6}",
+      "Targets": [
+        "id=startTime",
+        "name=startTime",
+        "xpath=//*[@id=\"startTime\"]",
+        "xpath=//input[@id='startTime']",
+        "xpath=//div[8]/div/div[6]/input",
+        "css=#startTime"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "id=startTime",
+      "Value": "",
+      "Targets": [
+        "id=startTime",
+        "name=startTime",
+        "xpath=//*[@id=\"startTime\"]",
+        "xpath=//input[@id='startTime']",
+        "xpath=//div[8]/div/div[6]/input",
+        "css=#startTime"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "id=endTime",
+      "Value": "",
+      "Targets": [
+        "id=endTime",
+        "name=endTime",
+        "xpath=//*[@id=\"endTime\"]",
+        "xpath=//input[@id='endTime']",
+        "xpath=//div[8]/input",
+        "css=#endTime"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "type",
+      "Target": "id=endTime",
+      "Value": "${!COL7}",
+      "Targets": [
+        "id=endTime",
+        "name=endTime",
+        "xpath=//*[@id=\"endTime\"]",
+        "xpath=//input[@id='endTime']",
+        "xpath=//div[8]/input",
+        "css=#endTime"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "id=endTime",
+      "Value": "",
+      "Targets": [
+        "id=endTime",
+        "name=endTime",
+        "xpath=//*[@id=\"endTime\"]",
+        "xpath=//input[@id='endTime']",
+        "xpath=//div[8]/input",
+        "css=#endTime"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "id=eventname",
+      "Value": "",
+      "Targets": [
+        "id=eventname",
+        "name=eventname",
+        "xpath=//*[@id=\"eventname\"]",
+        "xpath=//input[@id='eventname']",
+        "xpath=//div[10]/input",
+        "css=#eventname"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "type",
+      "Target": "id=eventname",
+      "Value": "${!COL8}",
+      "Targets": [
+        "id=eventname",
+        "name=eventname",
+        "xpath=//*[@id=\"eventname\"]",
+        "xpath=//input[@id='eventname']",
+        "xpath=//div[10]/input",
+        "css=#eventname"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "id=eventdesc",
+      "Value": "",
+      "Targets": [
+        "id=eventdesc",
+        "name=eventdesc",
+        "xpath=//*[@id=\"eventdesc\"]",
+        "xpath=//textarea[@id='eventdesc']",
+        "xpath=//textarea",
+        "css=#eventdesc"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "type",
+      "Target": "id=eventdesc",
+      "Value": "${!COL9}",
+      "Targets": [
+        "id=eventdesc",
+        "name=eventdesc",
+        "xpath=//*[@id=\"eventdesc\"]",
+        "xpath=//textarea[@id='eventdesc']",
+        "xpath=//textarea",
+        "css=#eventdesc"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "id=eventvenue",
+      "Value": "",
+      "Targets": [
+        "id=eventvenue",
+        "name=eventvenue",
+        "xpath=//*[@id=\"eventvenue\"]",
+        "xpath=//input[@id='eventvenue']",
+        "xpath=//div[14]/input",
+        "css=#eventvenue"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "type",
+      "Target": "id=eventvenue",
+      "Value": "${!COL10}",
+      "Targets": [
+        "id=eventvenue",
+        "name=eventvenue",
+        "xpath=//*[@id=\"eventvenue\"]",
+        "xpath=//input[@id='eventvenue']",
+        "xpath=//div[14]/input",
+        "css=#eventvenue"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "id=eventpincode",
+      "Value": "",
+      "Targets": [
+        "id=eventpincode",
+        "name=eventpincode",
+        "xpath=//*[@id=\"eventpincode\"]",
+        "xpath=//input[@id='eventpincode']",
+        "xpath=//div[16]/input",
+        "css=#eventpincode"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "type",
+      "Target": "id=eventpincode",
+      "Value": "${!COL11}",
+      "Targets": [
+        "id=eventpincode",
+        "name=eventpincode",
+        "xpath=//*[@id=\"eventpincode\"]",
+        "xpath=//input[@id='eventpincode']",
+        "xpath=//div[16]/input",
+        "css=#eventpincode"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "id=sankalpaMode",
+      "Value": "",
+      "Targets": [
+        "id=sankalpaMode",
+        "name=sankalpaMode",
+        "xpath=//*[@id=\"sankalpaMode\"]",
+        "xpath=//select[@id='sankalpaMode']",
+        "xpath=//div[2]/div[2]/select",
+        "css=#sankalpaMode"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "select",
+      "Target": "id=sankalpaMode",
+      "Value": "label=In Person and On Behalf",
+      "Targets": [
+        "id=sankalpaMode",
+        "name=sankalpaMode",
+        "xpath=//*[@id=\"sankalpaMode\"]",
+        "xpath=//select[@id='sankalpaMode']",
+        "xpath=//div[2]/div[2]/select",
+        "css=#sankalpaMode"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "id=email",
+      "Value": "",
+      "Targets": [
+        "id=email",
+        "name=email",
+        "xpath=//*[@id=\"email\"]",
+        "xpath=//input[@id='email']",
+        "xpath=//div[14]/div/div[2]/input",
+        "css=#email"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "type",
+      "Target": "id=email",
+      "Value": "${!COL12}",
+      "Targets": [
+        "id=email",
+        "name=email",
+        "xpath=//*[@id=\"email\"]",
+        "xpath=//input[@id='email']",
+        "xpath=//div[14]/div/div[2]/input",
+        "css=#email"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "id=organiseremail",
+      "Value": "",
+      "Targets": [
+        "id=organiseremail",
+        "name=organiseremail",
+        "xpath=//*[@id=\"organiseremail\"]",
+        "xpath=//input[@id='organiseremail']",
+        "xpath=//div[16]/div/div[2]/input",
+        "css=#organiseremail"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "type",
+      "Target": "id=organiseremail",
+      "Value": "mohitgp@gmail.com",
+      "Targets": [
+        "id=organiseremail",
+        "name=organiseremail",
+        "xpath=//*[@id=\"organiseremail\"]",
+        "xpath=//input[@id='organiseremail']",
+        "xpath=//div[16]/div/div[2]/input",
+        "css=#organiseremail"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "id=coordinatorName",
+      "Value": "",
+      "Targets": [
+        "id=coordinatorName",
+        "name=coordinatorName",
+        "xpath=//*[@id=\"coordinatorName\"]",
+        "xpath=//select[@id='coordinatorName']",
+        "xpath=//div[19]/div/div[2]/select",
+        "css=#coordinatorName"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "select",
+      "Target": "id=coordinatorName",
+      "Value": "label=Chitra Gupta",
+      "Targets": [
+        "id=coordinatorName",
+        "name=coordinatorName",
+        "xpath=//*[@id=\"coordinatorName\"]",
+        "xpath=//select[@id='coordinatorName']",
+        "xpath=//div[19]/div/div[2]/select",
+        "css=#coordinatorName"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "executeScript_Sandbox",
+      "Target": "return Number(${!csvReadLineNumber})+1",
+      "Value": "!csvReadLineNumber",
+      "Description": "Manually step to the next row index line"
+    },
+    {
+      "Command": "store",
+      "Target": "true",
+      "Value": "!errorIgnore",
+      "Description": "Ignore error if next line is EOF"
+    },
+    {
+      "Command": "csvRead",
+      "Target": "rp.csv",
+      "Value": "",
+      "Description": "Read the next loop item"
+    },
+    {
+      "Command": "store",
+      "Target": "false",
+      "Value": "!errorIgnore",
+      "Description": ""
+    },
+    {
+      "Command": "end",
+      "Target": "",
+      "Value": "",
+      "Description": "Closes the loop"
+    }
+  ]
+}
